@@ -15,7 +15,7 @@ def getCoords(address):
     :param address: address
     :return: latitude and longitude
     """
-    key = "f36d1725ef2c44b9a2f47184cb45e756"
+    key = ""
     geocoder = OpenCageGeocode(key)
 
     results = geocoder.geocode(address)
@@ -144,9 +144,9 @@ def main():
 if __name__ == "__main__":
     spark = SparkSession.builder.appName("spark_practice").getOrCreate()
     rest_path = (
-        "/Users/dianka/Desktop/epam bigData course/spark/homework/restaurant_csv/"
+        "restaurant_csv"
     )
-    weather_path = "/Users/dianka/Desktop/epam bigData course/spark/homework/weather"
-    final_path = "/Users/dianka/Desktop/epamß bigData course/spark/homework/main"
+    weather_path = "weather"
+    final_path = "main"
 
     main()
